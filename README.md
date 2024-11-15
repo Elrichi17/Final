@@ -1,0 +1,4 @@
+-Para poder ver el contenido de la pagina hay que iniciar sesion.
+-Para acceder al panel del adiministrador /secreturl-admin   , user: admin , password: password . Ahi se puede agregar e eliminar de datos de las entidades.
+-En photos para comprar busca un generador de tarjetas de credito e ingresas los datos y melo.
+-Se puede navergar por toda la pagina mientras este logueado.
