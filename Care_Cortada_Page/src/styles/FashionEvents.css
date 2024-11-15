@@ -1,0 +1,79 @@
+
+.fashion-events-container {
+  font-family: 'Roboto', sans-serif;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+.fashion-events-container h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.event-date, .event-location {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.event-models, .event-products {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.event-models h3, .event-products h3 {
+  font-size: 1.4rem;
+  color: #2980b9;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.event-models ul, .event-products ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-models li, .event-products li {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
