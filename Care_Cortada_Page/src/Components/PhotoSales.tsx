@@ -6,7 +6,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements, useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 
 
-const stripePromise = loadStripe('pk_test_51QLQCM1MPsN5RDQrKOQYqw82PKAkOIk9dOZAIwGA0lQQ1INMZUQEW3DXufOCrQhkjwVGbcuMuA9ABt7Niv0GWe2k00Rcb3gu0C');
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 export const PhotoSales = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
