@@ -15,7 +15,7 @@ export const ContactUs = () => {
     
       const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-ç
+
         alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
       };
