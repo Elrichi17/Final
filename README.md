@@ -1,4 +1,4 @@
-Configuracion:
+Configuracion:Dejar cargar la pag (ya que despues de 15 min inactiva se suspenden los servicios pero se activan nuevamente cuando hay trafico en esta)
 -Para ver la base de datos actual (Como estaba local toco renderizarla) y hacer consultass...
 Hostname:dpg-cssobql6l47c73ef3h40-a
 Port:5432
