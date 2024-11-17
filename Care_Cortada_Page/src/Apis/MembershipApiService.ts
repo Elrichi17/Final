@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Membership } from '../Models/Memberships';
-const API_URL = 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL; 
 
 export const MembershipApiService = {
   getMemberships: async (): Promise<Membership[]> => {

@@ -4,11 +4,11 @@ import '../styles/Models.css';
 import { Model } from '../Models/Model';
 export const Models = () => {
   const [models, setModels] = useState<Model[]>([]);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   
   const fetchModels = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/models'); 
+      const response = await axios.get(`${API_URL}/models`); 
       console.log(response.data); 
       setModels(response.data); 
     } catch (error) {

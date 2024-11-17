@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Product } from '../Models/Product';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL; 
 
 export const ProductApiService = {
   getProducts: async (): Promise<Product[]> => {

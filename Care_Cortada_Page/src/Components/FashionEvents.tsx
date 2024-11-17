@@ -9,13 +9,13 @@ export const FashionEvents = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [models, setModels] = useState<Model[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const fetchData = async () => {
     try {
       const [eventsResponse, modelsResponse, productsResponse] = await Promise.all([
-        axios.get('http://localhost:3000/events'),
-        axios.get('http://localhost:3000/models'),
-        axios.get('http://localhost:3000/products')
+        axios.get(`${API_URL}/events`),
+        axios.get(`${API_URL}/models`),
+        axios.get(`${API_URL}/products`)
       ]);
 
       setEvents(eventsResponse.data);

@@ -8,11 +8,11 @@ export const MakeupProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/products');
+      const response = await axios.get(`${API_URL}/products`);
       console.log(response.data); 
       setProducts(response.data); 
       setLoading(false);

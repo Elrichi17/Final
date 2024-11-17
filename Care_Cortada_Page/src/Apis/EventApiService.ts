@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Event } from '../Models/Events';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL; 
 
 export const EventApiService = {
   getEvents: async (): Promise<Event[]> => {

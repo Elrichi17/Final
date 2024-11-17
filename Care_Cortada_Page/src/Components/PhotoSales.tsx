@@ -13,11 +13,11 @@ export const PhotoSales = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
   const [purchaseType, setPurchaseType] = useState<string>('digital');
   const [loading, setLoading] = useState(false); 
-
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchPhotos = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/photos');
+      const response = await axios.get(`${API_URL}/photos`);
       setPhotos(response.data);
     } catch (error) {
       console.error('Error fetching photos', error);
@@ -47,7 +47,7 @@ export const PhotoSales = () => {
   
  
       try {
-        const response = await axios.post('http://localhost:3000/payments/create-payment-intent', {
+        const response = await axios.post(`${API_URL}/payments/create-payment-intent`, {
           amount: selectedPhoto.price,
           currency: 'usd',
         });

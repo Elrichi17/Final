@@ -6,11 +6,11 @@ import { Membership } from '../Models/Memberships';
 export const ExclusiveMemberships = () => {
   const [memberships, setMemberships] = useState<Membership[]>([]);
   const [selectedMembership, setSelectedMembership] = useState<Membership | null>(null);
-
+  const API_URL = import.meta.env.VITE_API_URL;
  
   const fetchMemberships = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/memberships');
+      const response = await axios.get(`${API_URL}/memberships`);
       console.log(response.data); 
       setMemberships(response.data); 
     } catch (error) {
