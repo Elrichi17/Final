@@ -17,10 +17,11 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);  
   app.enableCors({
-    origin: process.env.FRONTEND_URL || '*', 
+    origin: ['https://final-front-ag9s.onrender.com', 'http://localhost:5173'], // Permite tanto local como producción
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type, Accept',
   });
+  
   
   const port = process.env.PORT || 3000;
 await app.listen(port);
