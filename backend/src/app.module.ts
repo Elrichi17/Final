@@ -16,14 +16,15 @@ import { PaymentsModule } from './Payments/payments.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5433,
-      username: 'user',
-      password: 'password',
-      database: 'carecortada', 
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT, 10),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
       autoLoadEntities: true,
       synchronize: true,
     }),
+    
     TypeOrmModule.forFeature([Event, Membership, Model, Photo, Product]),
     ModelsModule,ProductsModule,PhotosModule,MembershipsModule,EventsModule,PaymentsModule
   ],

@@ -14,13 +14,15 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);  
   app.enableCors({
-    origin: 'http://localhost:5173',  
-    methods: 'GET,POST,PUT,DELETE',  
-    allowedHeaders: 'Content-Type, Accept',  
+    origin: process.env.FRONTEND_URL || '*', 
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type, Accept',
   });
-  const port = 3000;
-  await app.listen(port);
-  console.log(`Application is running on: http://localhost:${port}`);
+  
+  const port = process.env.PORT || 3000;
+await app.listen(port);
+console.log(`Application is running on: http://localhost:${port}`);
+
 }
 dotenv.config();
 bootstrap();
